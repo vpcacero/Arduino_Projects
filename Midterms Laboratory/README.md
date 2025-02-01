@@ -1,10 +1,11 @@
-This project involves creating a system that detects button presses through an Arduino, sending the button's state to a Python script. The script then triggers an API call based on the button's state, with the other device connected via Wi-Fi or Hotspot controlling an LED on a breadboard.
+This Arduino-based system uses a photoresistor to measure light intensity and activate different LEDs based on predefined thresholds. It can operate in manual mode, where users set their own thresholds, or in automatic mode, where thresholds adjust based on the detected light conditions.
 
 Objective:
-The goal of this project is to design a system where button presses on an Arduino are detected and communicated to a Python script, which calls an API to control an LED. The connection to the external device is made using either Wi-Fi or Hotspot, with both devices running specific Arduino code.
+To create an adaptive lighting system that provides visual feedback using LEDs to indicate the current light intensity, with flexible configuration through serial commands.
 
 How to Run:
-1. Connect the button to the designated pin on the Arduino.
-2. Upload the provided Arduino code to your board.
-3. Run the Python script on your computer.
-4. Press the button to send its state to the script, triggering the API call to control the LED.
+1. The system reads the amount of light in the environment using a light sensor.
+2. Based on the light level, it turns on one of three LEDs: green for low light, yellow for moderate light, and red for bright light.
+3. You can switch between automatic mode, where the system adjusts the light thresholds itself, or manual mode, where you can set your own light levels.
+4. The system shows the current light level, mode, and which LED is on in the Serial Monitor.
+5. It listens for commands through a connected computer to change the settings.
